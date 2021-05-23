@@ -1,14 +1,14 @@
 {
   "name": "reduce-reducers",
-  "version": "1.0.4",
-  "description": "Reduce multiple reducers into a single reducer",
+  "version": "1.0.5",
+  "description": "Reduce multiple reducers into a single reducer working with connected-react-router ^v6.9.0",
   "keywords": [
     "reduce",
     "reducers",
     "redux"
   ],
   "license": "MIT",
-  "author": "Andrew Clark <acdlite@me.com>",
+  "author": "HuongLT",
   "files": [
     "lib",
     "es",
@@ -17,7 +17,7 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "index.d.ts",
-  "repository": "redux-utilities/reduce-reducers",
+  "repository": "huonglt/reduce-reducers",
   "scripts": {
     "precommit": "pretty-quick --staged",
     "format": "pretty-quick",
