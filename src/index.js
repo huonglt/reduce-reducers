@@ -23,7 +23,13 @@ export default (...args) => {
         );
       }
 
-      return reducer(newState, value, ...args);
+      const routerReducer = reducer['router'];
+      if (typeof routerReducer === 'function') {
+        const router = routerReducer.apply(undefined, [newState.router, value].concat(args));
+        return { ...newState, router };
+      } else {
+        return reducer.apply(undefined, [newState, value].concat(args));
+      }
     }, prevStateIsUndefined && !valueIsUndefined && initialState ? initialState : prevState);
   };
 };
